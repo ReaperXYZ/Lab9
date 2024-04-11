@@ -1,1 +1,34 @@
-#HI
+#Matthew Golden
+
+def main():
+    while True:
+        #Menu
+        print("Menu"
+            "\n-------------"
+            "\n1. Encode"
+            "\n2. Decode"
+            "\n3. Quit"
+            "\n"
+
+        choice = input("Please enter an option: ")
+
+        if choice == "1":
+            password = input("Please enter your password to encode: ")
+            #Goes through each digit in password
+            for number in password:
+                modified_number = int(number)
+                #Encodes password
+                if modified_number <= 6:
+                    modified_number += 3
+                else:
+                    modified_number -=7
+                password += str(modified_number)
+            print("Your password has been encoded and stored!")
+        if choice == "2":
+            print()
+        #Exits program
+        if choice == "3":
+            break
+
+if __name__ == "__main__":
+    main()
