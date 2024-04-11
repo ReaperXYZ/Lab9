@@ -8,12 +8,13 @@ def main():
             "\n1. Encode"
             "\n2. Decode"
             "\n3. Quit"
-            "\n"
+            "\n")
 
         choice = input("Please enter an option: ")
 
         if choice == "1":
             password = input("Please enter your password to encode: ")
+            encoded_password = ""
             #Goes through each digit in password
             for number in password:
                 modified_number = int(number)
@@ -21,8 +22,8 @@ def main():
                 if modified_number <= 6:
                     modified_number += 3
                 else:
-                    modified_number -=7
-                password += str(modified_number)
+                    modified_number -= 7
+                encoded_password += str(modified_number)
             print("Your password has been encoded and stored!")
         if choice == "2":
             print()
